@@ -14,7 +14,7 @@ class GetHandler(RequestHandler):
             try:
                 requested_object = KeyValuePair.get(key=requested_key)
                 if requested_object is None:
-                    return "NotFound", 404 
+                    return render_template("get.html", results="Sadly, no associated value exists :(")
             except PeeweeException as e:
                 return "NotFound", 404
             except Exception as e:

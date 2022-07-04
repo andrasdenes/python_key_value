@@ -4,4 +4,4 @@ get_blueprint = Blueprint("get_blueprint", __name__, url_prefix='/get')
 
 @get_blueprint.route("/", methods=["GET", "POST"])
 def get():
-    GetHandler().handle(request)
+    return GetHandler().handle(request)

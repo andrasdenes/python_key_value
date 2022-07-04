@@ -4,4 +4,4 @@ add_blueprint = Blueprint("add_blueprint", __name__,url_prefix="/add")
 
 @add_blueprint.route("/", methods=["GET", "POST"])
 def add():
-    AddHandler().handle(request)
+    return AddHandler().handle(request)

@@ -17,4 +17,3 @@ def home():
 
 app.register_blueprint(add_blueprint)
 app.register_blueprint(get_blueprint)
-print(app.url_map)
