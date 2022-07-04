@@ -1,0 +1,11 @@
+<!doctype html>
+<body>
+    {% block content %} 
+    <form action="/add">
+        <input type="submit" value="Store new value" />
+    </form>
+    <form action="/get">
+        <input type="submit" value="Get a value" />
+    </form>
+    {% endblock %}
+</body>

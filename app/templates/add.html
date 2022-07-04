@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="/add" method="post">
+    <div>
+        <label>key:</label>
+        <input id="key_input" name="key">
+    </div>
+    <div>
+        <label>value:</label>
+        <input id="value_input" name="value">
+    </div>
+    <div>
+        <button type="submit">Submit</button>    
+    </div>
+</form>
+<div style="padding-top: 30px;">
+    <form action="/">
+        <input type="submit" value="Home" />
+    </form>
+    <form action="/get">
+        <input type="submit" value="Get a value" />
+    </form>
+</div>
+<div style="padding-top: 30px;">
+    {% if results %}
+        posted values:
+        {{results}}
+    {% endif %}
+</div>
+{% endblock %}
